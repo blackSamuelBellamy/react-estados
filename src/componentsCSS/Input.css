@@ -1,0 +1,83 @@
+.inputContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 15%;
+
+  }
+
+.label {
+    color: #FFF;
+    text-shadow: 2px 1px #000;
+    font-size: 1.9em;
+    left: 18%;
+    top: -5%;
+    position: absolute;
+    transition: .7s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+input {
+    width: 10em;
+    border: none;
+    background: transparent;
+    outline: none;
+    text-align: center;
+    color: #FFF;
+    text-shadow: 1px 1px #000;
+    font-size: 1.9em;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+input:focus + label, input:valid + label {
+    color: rgb(4, 12, 77);
+    transform: scale(.8);
+    text-shadow: 0 0 5px #FFF, 0 0 25px #FFF, 0 0 50px #FFF, 0 0 100px #FFF;
+    top: -25%;
+}
+
+span {
+    display: block;
+    width: 20em;
+    height: 2px;
+    background: #FFF;
+    position: relative;
+    overflow: hidden;
+    left: -7%;
+}
+
+span::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgb(70, 7, 7), rgb(34, 34, 202),rgba(216, 216, 124, 0.815), rgb(51, 47, 47));
+    position: absolute;
+    left: -100%;
+    animation: input 2s linear infinite;
+}
+
+input:focus ~ span::before, input:valid ~ span::before {
+    left: 0;
+}
+
+@keyframes input {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 20em;
+    }
+}
+
+@media(max-width: 500px) {
+    span {
+        max-width: 17em;
+    }
+}   
