@@ -88,12 +88,16 @@
 @media(max-width: 600px) {
   .boxContainer {
     width: 30em;
+    height: 55vh;
   }
 }
 
 @media(max-width: 450px) {
   .boxContainer {
     width: 25em;
+  }
+  .btn {
+    width: 15em;
   }
 }
 

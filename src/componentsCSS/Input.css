@@ -78,6 +78,10 @@ input:focus ~ span::before, input:valid ~ span::before {
 
 @media(max-width: 500px) {
     span {
-        max-width: 17em;
+        max-width: 15em;
+    }
+
+    .label, input {
+        font-size: 1.5em;
     }
 }   
