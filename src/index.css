@@ -87,7 +87,7 @@
 @media(max-width: 600px) {
   .boxContainer {
     width: 30em;
-    min-height: 55vh;
+    height: 55vh;
   }
 }
 
